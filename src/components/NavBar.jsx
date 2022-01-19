@@ -1,4 +1,4 @@
-import Carrito from "./Carrito"
+import Carrito from "./CartWidget"
 import logo from "./logo.png"
 
 function NavBar() {
