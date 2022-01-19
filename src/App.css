@@ -89,3 +89,14 @@ a {
   color: white;
   text-decoration: none;
 }
+
+.tam-icon {
+  width: 30px;
+  cursor: pointer;
+}
+
+.ajuste-icon {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
