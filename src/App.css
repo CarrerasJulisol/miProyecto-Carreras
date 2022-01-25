@@ -109,9 +109,9 @@ a {
   flex-direction: column;
   align-items: center;
   width: 20%;
-  height: 150px;
   justify-content: space-between;
   background-color: lightgray;
+  margin: 20px;
 }
 
 /* estilo sumar al carrito */
@@ -134,11 +134,35 @@ a {
 }
 
 .agregar {
-  background-color: #64d4ff;
+  background-color: #55b766;
   border: 0px;
   padding: 5px;
   border-radius: 8px;
   cursor: pointer;
   color: #10262e;
   margin: 10px 0px;
+}
+
+/* Estilo de las cards */
+
+.nombre-prod {
+  font-size: 12px;
+  text-align: center;
+}
+
+.tam-prod {
+  width: 180px;
+}
+
+.precio-prod {
+  font-size: 20px;
+  margin: 0px;
+}
+
+/* posicion cards*/
+
+.contenedor-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
