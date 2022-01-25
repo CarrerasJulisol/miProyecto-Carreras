@@ -1,5 +1,9 @@
+import ItemList from "./ItemList"
+
 function ItemListContainer() {
-     return // mi lista de productos
+     return <div>
+          <ItemList />
+     </div>
 }
 
 export default ItemListContainer
