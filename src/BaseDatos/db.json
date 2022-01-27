@@ -1,0 +1,60 @@
+{
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "Máscara de pestañas",
+            "precio": 500,
+            "imgURL": "https://i.ibb.co/v18v4cW/mascaraP.jpg",
+            "descripcion": "Máscara de pestañas hecha con Manteca de cacao, Aceite de coco, Aceite de ricino, Cera de abeja, Carbón activado, Pigmentos vegetales.",
+            "stock": 8
+        },
+        {
+            "id": 2,
+            "nombre": "Kit de Cepillos",
+            "precio": 2480,
+            "imgURL": "https://i.ibb.co/Qb040yd/248926445-205524528358166-4915981980947253815-n.jpg",
+            "descripcion": "Kit de cepillos para múltiples ocasiones de cerdas de pita vegetal.",
+            "stock": 5
+        },
+        {
+            "id": 3,
+            "nombre": "Desodorante natural",
+            "precio": 400,
+            "imgURL": "https://i.ibb.co/ZJJ3f9h/118397452-158103259305914-2809781037395207490-n.jpg",
+            "descripcion": "Hecho con aceite de coco, bicarboato de sodio, fécula de maíz. Viene en envase de vidrio que podes reutilizar.",
+            "stock": 11
+        },
+        {
+            "id": 4,
+            "nombre": "Shampoo y acondicionador sólido",
+            "precio": 700,
+            "imgURL": "https://i.ibb.co/b6vMvG8/118868291-1183817341986641-446069257734613276-n.jpg",
+            "descripcion": "Hecho con aceite de coco y aceite de pepitas de uva. Arom a menta piperita.",
+            "stock": 15
+        },
+        {
+            "id": 5,
+            "nombre": "Peine de madera",
+            "precio": 600,
+            "imgURL": "https://i.ibb.co/tqbhz5L/64312869-2435028909915111-6325920298829843945-n.jpg",
+            "descripcion": "Sin tratamiento químico. Están fabricados de maderas de reforestación. Son anti-frizz y biodegradables.",
+            "stock": 8
+        },
+        {
+            "id": 6,
+            "nombre": "Bálsamo labial",
+            "precio": 250,
+            "imgURL": "https://i.ibb.co/n02nsMj/118651013-116605716828936-3352087661918962098-n.jpg",
+            "descripcion": "Hecho de aceite de coco, manteca de cacao y cera de abeja. Envase reutilizable.",
+            "stock": 6
+        },
+        {
+            "id": 7,
+            "nombre": "Cepillo de dientes",
+            "precio": 200,
+            "imgURL": "https://i.ibb.co/W5JC2FM/256783025-131412589261409-855547103145768984-n.jpg",
+            "descripcion": "El mango es biodegradable, hecho de bambú moso, y las cerdas hechas de Nylon libres de BPA reciclable.",
+            "stock": 24
+        }
+    ]
+}
