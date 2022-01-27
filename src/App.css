@@ -37,9 +37,7 @@
   padding: 5px 0px;
 }
 
-.visible {
-  visibility: visible;
-}
+
 
 .mouse-arriba {
   text-shadow: 1px 1px #9c27b0ba;
@@ -73,10 +71,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.visible {
-  visibility: visible;
+  z-index: 100;
 }
 
 .estilo-modal {
@@ -109,9 +104,9 @@ a {
   flex-direction: column;
   align-items: center;
   width: 20%;
-  height: 150px;
   justify-content: space-between;
   background-color: lightgray;
+  margin: 20px;
 }
 
 /* estilo sumar al carrito */
@@ -134,11 +129,131 @@ a {
 }
 
 .agregar {
-  background-color: #64d4ff;
+  background-color: #55b766;
   border: 0px;
   padding: 5px;
   border-radius: 8px;
   cursor: pointer;
   color: #10262e;
   margin: 10px 0px;
+}
+
+/* Estilo de las cards */
+
+.nombre-prod {
+  font-size: 12px;
+  text-align: center;
+}
+
+.ajuste.img {
+  margin: 10px;
+}
+
+.tam-prod {
+  width: 100%;
+  cursor: pointer;
+}
+
+.precio-prod {
+  font-size: 20px;
+  margin: 0px;
+}
+
+/* posicion cards*/
+
+.contenedor-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* estilo toasty*/
+@import "toastify-js/src/toastify.css";
+
+/* modal de los detalles de cada producto */
+.contenedor-detalles {
+  height: 598px;
+  background: white;
+  width: 500px;
+  position: fixed;
+  top: 2%;
+  left: 25%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.prod-modal {
+  text-align: center;
+  margin: 10px;
+}
+
+.imag-modal {
+  margin: 0px 80px;
+}
+
+.precio-modal {
+  right: 50px;
+  position: absolute;
+  background-color: #55b766;
+  width: 100px;
+  text-align: center;
+  height: 30px;
+  font-size: 20px;
+  margin: 0px;
+  bottom: 190px;
+}
+
+.desc-modal {
+  text-align: center;
+  margin: 15px 20px;
+}
+
+.ajustar-add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cerrar-prod {
+  top: 4px;
+  position: absolute;
+  right: 4px;
+  background-color: #d35858;
+  border: 0px;
+  padding: 5px;
+  width: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-prod {
+  background-color: #00000078;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* pagina de cargando */
+.cargando-pag {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+}
+
+.estilo-cargando {
+  color: #10262e;
+  font-size: 20px;
+  text-align: center;
 }

@@ -1,6 +1,5 @@
 import './App.css';
-import Card from './components/card';
-import ItemCount from './components/ItemCount';
+import ItemListContainer from './components/ItemListContainer';
 import ModalCarrito from './components/ModalCarrito';
 import NavBar from './components/NavBar';
 
@@ -9,7 +8,7 @@ function App() {
     <div>
       <NavBar />
       <ModalCarrito />
-      <Card />
+      <ItemListContainer />
     </div>
     
   );
