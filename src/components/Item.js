@@ -1,4 +1,3 @@
-import ItemCount from "./ItemCount"
 import ItemModal from "./ItemModal"
 
 function Item({producto}) {
@@ -13,7 +12,6 @@ function Item({producto}) {
             <img className="tam-prod" src={producto.imgURL} alt={producto.nombre} onClick={abrirItem} />
         </div>
         <p className="precio-prod">$ {producto.precio}</p>
-        <ItemCount stock={producto.stock} inicial={0} onAdd={0} />
         <ItemModal prod={producto} />
     </div>
 }
