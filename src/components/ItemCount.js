@@ -1,10 +1,12 @@
 import { useState } from "react"
 import Toastify from "toastify-js"
 
-const ItemCount = ({stock, inicial, onAdd}) => {
+const ItemCount = ({stock, inicial, onAdd, contador}) => {
     const [mas, setMas] = useState(inicial)
     let [cantidad, setCantidad] = useState(stock)
     let [enCarrito, setEnCarrito] = useState(onAdd)
+    
+
     function restar() {
         if ( mas >= 2) {
            setMas(mas - 1) 
@@ -17,10 +19,10 @@ const ItemCount = ({stock, inicial, onAdd}) => {
         }
     }
 
-    function agregar() {
+    function Agregar() {
         setMas(inicial)
         setCantidad(cantidad - mas)
-        setEnCarrito(enCarrito + mas)
+        setEnCarrito((enCarrito) + mas)
         if ( mas >= 1) {
             Toastify({
             text: "Agregado " + mas + " al carrito!",
@@ -32,9 +34,13 @@ const ItemCount = ({stock, inicial, onAdd}) => {
                 
             }).showToast();
             console.log('Ahora el stock es de: ' + (cantidad - mas) )
-            console.log('En el carrito hay ' + (enCarrito + mas) + ' de este producto.')
+            console.log('Total de este productos en el carrito: ' + ((enCarrito) + mas))
         }
-        
+    }
+
+    function DosFunc() {
+        Agregar()
+        contador()
     }
 
     return <div className="ajustar-add">
@@ -43,7 +49,7 @@ const ItemCount = ({stock, inicial, onAdd}) => {
             <div className="cantidad">{mas}</div>
             <button className="sumar" onClick={sumar}>+</button>
         </div>
-            <button className="agregar" onClick={agregar}>Agregar al carrito</button>
+            <button className="agregar" onClick={DosFunc}>Agregar al carrito</button>
     </div>
 }
 export default ItemCount

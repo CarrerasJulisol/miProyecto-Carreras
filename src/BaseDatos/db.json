@@ -6,6 +6,7 @@
             "precio": 500,
             "imgURL": "https://i.ibb.co/v18v4cW/mascaraP.jpg",
             "descripcion": "Máscara de pestañas hecha con Manteca de cacao, Aceite de coco, Aceite de ricino, Cera de abeja, Carbón activado, Pigmentos vegetales.",
+            "categoria": "cosmetica",
             "stock": 8
         },
         {
@@ -14,6 +15,7 @@
             "precio": 2480,
             "imgURL": "https://i.ibb.co/Qb040yd/248926445-205524528358166-4915981980947253815-n.jpg",
             "descripcion": "Kit de cepillos para múltiples ocasiones de cerdas de pita vegetal.",
+            "categoria": "limpieza",
             "stock": 5
         },
         {
@@ -22,14 +24,16 @@
             "precio": 400,
             "imgURL": "https://i.ibb.co/ZJJ3f9h/118397452-158103259305914-2809781037395207490-n.jpg",
             "descripcion": "Hecho con aceite de coco, bicarboato de sodio, fécula de maíz. Viene en envase de vidrio que podes reutilizar.",
+            "categoria": "higiene-personal",
             "stock": 11
         },
         {
             "id": 4,
             "nombre": "Shampoo y acondicionador sólido",
             "precio": 700,
-            "imgURL": "https://i.ibb.co/b6vMvG8/118868291-1183817341986641-446069257734613276-n.jpg",
+            "imgURL": "https://i.ibb.co/V2qS5tT/shampoo.jpg",
             "descripcion": "Hecho con aceite de coco y aceite de pepitas de uva. Arom a menta piperita.",
+            "categoria": "higiene-personal",
             "stock": 15
         },
         {
@@ -38,6 +42,7 @@
             "precio": 600,
             "imgURL": "https://i.ibb.co/tqbhz5L/64312869-2435028909915111-6325920298829843945-n.jpg",
             "descripcion": "Sin tratamiento químico. Están fabricados de maderas de reforestación. Son anti-frizz y biodegradables.",
+            "categoria": "higiene-personal",
             "stock": 8
         },
         {
@@ -46,6 +51,7 @@
             "precio": 250,
             "imgURL": "https://i.ibb.co/n02nsMj/118651013-116605716828936-3352087661918962098-n.jpg",
             "descripcion": "Hecho de aceite de coco, manteca de cacao y cera de abeja. Envase reutilizable.",
+            "categoria": "cosmetica",
             "stock": 6
         },
         {
@@ -54,6 +60,7 @@
             "precio": 200,
             "imgURL": "https://i.ibb.co/W5JC2FM/256783025-131412589261409-855547103145768984-n.jpg",
             "descripcion": "El mango es biodegradable, hecho de bambú moso, y las cerdas hechas de Nylon libres de BPA reciclable.",
+            "categoria": "higiene-personal",
             "stock": 24
         }
     ]
