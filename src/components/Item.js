@@ -12,7 +12,7 @@ function Item({producto, contador}) {
             <img className="tam-prod" src={producto.imgURL} alt={producto.nombre} onClick={abrirItem} />
         </div>
         <p className="precio-prod">$ {producto.precio}</p>
-        <ItemModal prod={producto} contador={contador} />
+        <ItemModal prod={producto} />
     </div>
 }
 export default Item
