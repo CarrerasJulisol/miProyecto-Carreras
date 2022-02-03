@@ -4,6 +4,7 @@ import ItemListContainer from './components/ItemListContainer';
 import ModalCarrito from './components/ModalCarrito';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
+import { useState } from 'react';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Route path='productos'>
           <Route index element={<ItemListContainer />} />
           <Route path="categoria">
-            <Route path=":categoria" element={<ItemListContainer />}></Route>
+            <Route path=":categoria" element={<ItemListContainer />}/>
           </Route>
         </Route>
         <Route path='mi-cuenta' />
