@@ -47,7 +47,7 @@ function NavBar() {
                         <p id="mi-cuenta" onClick={visibleCuenta} style={{margin: 0}}>Mi cuenta</p>
                         <ul className="estilo-categ" id="list-cuenta">
                             <li className="padd"><Link to="/ingresar">Ingresar</Link></li>
-                            <li className="padd"><Link to="/productos">Facturas</Link></li>
+                            <li className="padd"><Link to="/facturas">Facturas</Link></li>
                             <li className="padd"><Link to="/sorteos">Sorteos</Link></li>
                             <li className="padd"><Link to="/preguntas">Preguntas</Link></li>
                         </ul>
