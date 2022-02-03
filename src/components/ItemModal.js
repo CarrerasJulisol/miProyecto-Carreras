@@ -1,11 +1,14 @@
 import ItemCount from "./ItemCount"
+import { useState } from "react"
 
-function ItemModal({prod}) {
+function ItemModal({prod, contador}) {
+
+
     function modal() {
          const modal = document.getElementById(prod.id)
          modal.classList.remove('visible')
-    }      
-    
+    }
+
     return <div className="modal-prod" id={prod.id}>
         <div className="contenedor-detalles">
             <h2 className="prod-modal">{prod.nombre}</h2>
@@ -14,8 +17,8 @@ function ItemModal({prod}) {
         </div>
         <p className="precio-modal">$ {prod.precio}</p>
         <p className="desc-modal">{prod.descripcion}</p>
-        <ItemCount stock={prod.stock} inicial={0} onAdd={0} />
-        <button className="cerrar-prod" onClick={modal} id={prod.id}>x</button>
+        <ItemCount stock={prod.stock} inicial={0} onAdd={0} producto={prod} contador={contador}/>
+        <button className="cerrar-prod" onClick={modal} id={prod.id} >x</button>
         </div>        
     </div>
 }
