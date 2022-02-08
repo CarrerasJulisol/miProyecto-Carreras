@@ -1,4 +1,10 @@
 {
+    "carrito": [
+        {
+            "producto": {},
+            "cantidad": 0
+        }
+    ],
     "productos": [
         {
             "id": 1,

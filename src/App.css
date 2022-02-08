@@ -19,6 +19,7 @@
 .orden-menu {
   width: 180px;
   cursor: pointer;
+  z-index: 20;
 }
 
 .estilo-categ {
@@ -37,8 +38,6 @@
   padding: 5px 0px;
 }
 
-
-
 .mouse-arriba {
   text-shadow: 1px 1px #9c27b0ba;
 }
@@ -50,40 +49,64 @@ a {
 
 .tam-icon {
   width: 30px;
-  cursor: pointer;
 }
 
 .ajuste-icon {
   display: flex;
   align-items: center;
   margin: 0 10px;
+  cursor: pointer;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
 }
 
 /* modal carrito */
 .modal-carrito {
-  background-color: #00000078;
-  width: 100vw;
-  height: 100vh;
-  visibility: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  z-index: 100;
+  height: 80vh;
+  margin-top: 50px;
 }
 
 .estilo-modal {
-  width: 50%;
-  height: 50%;
-  background-color: white;
-  text-align: center;
+  width: 100vw;
+  margin: 0px 50px;
 }
 
 .titulo-modal {
   color: black;
   font-size: 30px;
+  text-align: left;
+}
+
+.cont-prod-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cant-eliminar {
+  display: flex;
+  align-items: center;
+}
+
+.boton-eliminar {
+  border: 0px solid;
+  background-color: transparent;
+  color: gray;
+  cursor: pointer;
+}
+
+.cont-vaciar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.vaciar-carro {
+  cursor: pointer;
 }
 
 .cerrar-carrito {
@@ -107,6 +130,7 @@ a {
   justify-content: space-evenly;
   background-color: lightgray;
   margin: 20px;
+  cursor: pointer;
 }
 
 /* estilo sumar al carrito */
@@ -151,7 +175,6 @@ a {
 
 .tam-prod {
   width: 100%;
-  cursor: pointer;
 }
 
 .precio-prod {
@@ -169,49 +192,44 @@ a {
 /* estilo toasty*/
 @import "toastify-js/src/toastify.css";
 
-/* modal de los detalles de cada producto */
+/* detalles de cada producto */
 .contenedor-detalles {
-  height: 598px;
-  background: white;
-  width: 500px;
-  position: fixed;
-  top: 2%;
-  left: 25%;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  margin-top: 50px;
 }
 
 .prod-modal {
-  text-align: center;
-  margin: 10px;
+  text-align: right;
+  margin: 10px 50px;
 }
 
 .imag-modal {
   margin: 0px 80px;
 }
 
+.cont-precio {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .precio-modal {
-  right: 50px;
-  position: absolute;
   background-color: #55b766;
   width: 100px;
   text-align: center;
   height: 30px;
   font-size: 20px;
-  margin: 0px;
-  bottom: 190px;
+  margin: 0px 50px;
+}
+
+.cont-count {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .desc-modal {
   text-align: center;
-  margin: 15px 20px;
-}
-
-.ajustar-add {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 15px 20px 15px 0px;
 }
 
 .cerrar-prod {
@@ -227,19 +245,7 @@ a {
 }
 
 .modal-prod {
-  background-color: #00000078;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.visible {
-  visibility: visible;
-  opacity: 1;
+  height: 80vh;
 }
 
 /* pagina de cargando */

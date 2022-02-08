@@ -1,13 +1,11 @@
+import { useNavigate } from "react-router-dom";
+import CartContext from "../context/CartContext";
 import carrito from "./carrito.png";
 
 export default function Carrito() {
+        const navigate = useNavigate()
 
-        function modal() {
-                const modal = document.getElementById('modal')
-                modal.classList.add('visible')
-        }      
-
-        return <div className="ajuste-icon" onClick={modal}>
+        return <div className="ajuste-icon" onClick={()=> navigate(`/carrito`)}>
                 <img src={carrito} alt="carrito" className="tam-icon" />
         </div>
 }
