@@ -1,14 +1,17 @@
 import ItemCount from "./ItemCount"
 import { useState } from "react"
-import { useCarrito } from "../context/CartContext"
+import { useCarrito } from "../../context/CartContext"
 import { useNavigate } from "react-router-dom"
 
 function ItemDetail({producto}) {
-    const { addItem } = useCarrito()
+    const { addItem, prodStock, setProdStock } = useCarrito()
     const [ cantidad, setCantidad ] = useState(0)
+    const navigate = useNavigate()
+    setProdStock(producto.stock)
+    console.log(prodStock)
 
     const clickAdd = () => {
-        addItem(producto, cantidad)
+        addItem(producto, cantidad, prodStock)
         setCantidad(0)
     }
 
@@ -28,8 +31,10 @@ function ItemDetail({producto}) {
                             <p className="precio-modal">$ {producto.precio}</p>
                         </div>
                         <div className="cont-count">
-                            <ItemCount stock={producto.stock} cantidad={cantidad} setCantidad={setCantidad}/>
+                            <ItemCount prodStock={prodStock} cantidad={cantidad} setCantidad={setCantidad}/>
                             <button className="agregar" onClick={clickAdd}>Agregar al carrito</button>
+                            <button className="agregar" onClick={()=> navigate(`/carrito`)}>Terminar compra</button>
+                            <button className="agregar" onClick={()=> navigate(`/productos`)}>Volver</button>
                         </div>
                     </div>
                     

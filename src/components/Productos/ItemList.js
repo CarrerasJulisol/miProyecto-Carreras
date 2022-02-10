@@ -1,5 +1,6 @@
 import Item from "./Item"
 import { useEffect, useState } from "react"
+import { useCarrito } from "../../context/CartContext"
 
 function ItemList() {
     const [producto, setProducto] = useState([])

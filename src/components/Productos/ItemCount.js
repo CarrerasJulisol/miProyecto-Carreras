@@ -1,4 +1,4 @@
-const ItemCount = ({cantidad, setCantidad, stock}) => {
+const ItemCount = ({cantidad, setCantidad, prodStock}) => {
     function restar() {
         if ( cantidad >= 1) {
             setCantidad((prev) => prev - 1)
@@ -6,7 +6,7 @@ const ItemCount = ({cantidad, setCantidad, stock}) => {
     }
 
     function sumar() {
-        if ( cantidad < stock) {
+        if ( cantidad < prodStock) {
             setCantidad((prev) => prev + 1)
         }
     }

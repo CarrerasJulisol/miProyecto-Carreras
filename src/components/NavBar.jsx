@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
-import Carrito from "./CartWidget"
-import logo from "./logo.png"
 import { useNavigate } from "react-router-dom"
+import CartWidget from "./Carrito/CartWidget";
+import logo from "./Imagenes/logo.svg"
 
 function NavBar() {
     function visibleCateg() {
@@ -26,10 +26,10 @@ function NavBar() {
     
     return (
         <nav className="estilo-nav">
-            <div className="ajuste-icon">
+            <div>
                 <Link to="/"><img src={logo} alt="logo" /></Link>
             </div>
-            <div className="ajuste-icon">
+            <div>
             <Link to="/"><p style={{fontSize: 15}}>Nombre pagina</p></Link>
             </div>
             <div>
@@ -62,7 +62,7 @@ function NavBar() {
                     </li>
                 </ol>
             </div>
-            <Carrito />
+            <CartWidget/>
         </nav>
     )
 }

@@ -69,5 +69,19 @@
             "categoria": "higiene-personal",
             "stock": 24
         }
+    ],
+    "categorias": [
+        {
+            "id": 2001,
+            "categoria": "cosmetica"
+        },
+        {
+            "id": 2002,
+            "categoria": "limpieza"
+        },
+        {
+            "id": 2003,
+            "categoria": "higiene-personal"
+        }
     ]
 }

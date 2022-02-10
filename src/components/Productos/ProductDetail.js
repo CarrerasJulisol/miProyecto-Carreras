@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { useCarrito } from "../../context/CartContext"
 import ItemDetail from "./ItemDetail"
 
 function ProductDetail() {
     const {productoId} = useParams()
     const [producto, setProducto] = useState()
     const [cargando, setCargando] = useState(false)
-
+    
     useEffect(()=> {
         const URL = `http://localhost:3001/productos/${productoId}`
         setCargando(true)
@@ -16,10 +17,9 @@ function ProductDetail() {
         .finally(() => setCargando(false))
     }, [productoId])
 
-    
     if (cargando || !producto) return <div className="cargando-pag"><p className="estilo-cargando">Cargando... espere un momento.</p></div>
     return (
-        <ItemDetail producto={producto}/>
+        <ItemDetail producto={producto} />
     )
 }
 
