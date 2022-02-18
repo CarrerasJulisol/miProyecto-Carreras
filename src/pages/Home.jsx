@@ -1,7 +1,22 @@
 import { useNavigate } from "react-router-dom"
+import { getFirestore } from "../firebase"
+
+const PROD = []
 
 const Home = () => {
     let navigate = useNavigate()
+
+    const db = getFirestore()
+    const coleccion = db.collection("productos")
+    // agregar productos a firebase
+    const enFirestore = () => {
+        console.log("adentro")
+        PROD.forEach((prod) => {
+            coleccion
+            .add(prod)
+            .then((res) => console.log("producto agregado. ID: ", res.id))
+        })
+    }
 
     function verProductos() {
         navigate("/productos")

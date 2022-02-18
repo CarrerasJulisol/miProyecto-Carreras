@@ -12,6 +12,7 @@ export const CartProvider = ({children}) => {
     const [total, setTotal] = useState(0)
     const [enCarro, setEnCarro] = useState(0)
     const [prodStock, setProdStock] = useState(0)
+    const [ordenID, setOrdenID] = useState("")
     const local = JSON.parse(localStorage.getItem("carro"))
     console.log(local)
 
@@ -57,7 +58,7 @@ export const CartProvider = ({children}) => {
     }
 
     return (
-    <CartContext.Provider value={{carro, addItem, removeItem, clear, estaCarrito, total, prodStock, setProdStock, enCarro}}>
+    <CartContext.Provider value={{carro, setCarro, addItem, removeItem, clear, estaCarrito, total, prodStock, setProdStock, enCarro, setEnCarro, setOrdenID, ordenID}}>
         {children}
     </CartContext.Provider>
     )

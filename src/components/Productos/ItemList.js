@@ -1,21 +1,35 @@
 import Item from "./Item"
 import { useEffect, useState } from "react"
-import { useCarrito } from "../../context/CartContext"
+import { getFirestore } from "../../firebase"
+import { useParams } from "react-router-dom"
 
 function ItemList() {
     const [producto, setProducto] = useState([])
     const [cargando, setCargando] = useState(false)
     const [error, setError] = useState(null)
 
-    useEffect(() => {
-        const DATOS = "http://localhost:3001/productos"
+    /*useEffect(() => {
+        const db = getFirestore()
+        const coleccionProd = db.collection('productos')
+        const prueba = coleccionProd.doc()
+        console.log(prueba)
+        const filtro = coleccionProd.where("categoriaId", "==", "cosmetica")
+
         setCargando(true)
-        fetch(DATOS)
-            .then((response) => response.json())
-            .then((json) => setProducto(json))
-            .catch((err) =>  setError(err))
-            .finally(() => setCargando(false))
-            
+        prueba.get()
+        .then((r)=> console.log(r))
+        .then((r)=> console.log(r.data))
+       // .then((response) => {
+       //     setProducto({...response.data(), id: response.id})
+       // })
+        .finally(() => setCargando(false))            
+    }, [])*/
+
+    useEffect(() => {
+        const db = getFirestore()
+        const coleccion = db.collection("productos")
+        coleccion.get()
+        .then((res) => setProducto(res.docs.map((res) => ({...res.data(), id: res.id}))))
     }, [])
 
     if (cargando) {

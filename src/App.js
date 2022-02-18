@@ -6,6 +6,8 @@ import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import { CartProvider } from './context/CartContext';
 import ProductDetail from './components/Productos/ProductDetail';
+import Comprar from './components/Carrito/Comprar';
+import FinCompra from './FinCompra';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
             </Route>
           </Route>
           <Route path='carrito' element={<Carrito />}/>
+          <Route path='finalizar-compra' element={<Comprar />}/>
+          <Route path='compra-finalizada' element={<FinCompra />}/>
           <Route path='mi-cuenta' />
           <Route path='ayuda' />
           </Route>

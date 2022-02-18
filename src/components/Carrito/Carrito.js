@@ -5,9 +5,7 @@ import { useCarrito } from "../../context/CartContext"
 const Carrito = () => {
     const {carro, removeItem, clear, total} = useCarrito()
     const navigate = useNavigate()
-    
-    console.log(carro.length)
-    console.log(carro)
+
     function contenidoCarro() {
         return (
             carro.map((element) => {
@@ -49,7 +47,7 @@ const Carrito = () => {
             </div>
             <div className="">
                 <button onClick={()=> navigate(`/productos`)}>Volver</button>
-                <button>Comprar</button>
+                <button onClick={()=> navigate(`/finalizar-compra`)}>Comprar</button>
             </div>
     </div>
     </div>)
