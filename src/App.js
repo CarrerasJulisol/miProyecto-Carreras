@@ -7,7 +7,11 @@ import Home from './pages/Home';
 import { CartProvider } from './context/CartContext';
 import ProductDetail from './components/Productos/ProductDetail';
 import Comprar from './components/Carrito/Comprar';
-import FinCompra from './FinCompra';
+import PreguntasFrecuentes from './pages/PreguntasFrecuentes';
+import Filtrar from './components/Filtrar';
+import Preguntar from './pages/Preguntar';
+import Footer from './components/Footer';
+import FinCompra from './pages/FinCompra';
 
 function App() {
   return (
@@ -16,21 +20,24 @@ function App() {
         <NavBar />
         <Routes>
           <Route path='/' >
-          <Route index element={<Home />} />
-          <Route path='productos'>
-            <Route index element={<ItemListContainer />} />
-            <Route path=':productoId' element={<ProductDetail />} />
-            <Route path='categoria'>
-              <Route path=':categoria'/>
+            <Route index element={<Home />} />
+              <Route path='productos'>
+                <Route index element={<ItemListContainer />} />
+                <Route path=':productoId' element={<ProductDetail />} />
+                <Route path='categoria'>
+                  <Route path=':categoria' element={<Filtrar />}/>
+                </Route>
+              </Route>
+            <Route path='carrito' element={<Carrito />}/>
+            <Route path='finalizar-compra' element={<Comprar />}/>
+            <Route path='compra-finalizada' element={<FinCompra />}/>
+            <Route path='ayuda'>
+              <Route path='preguntas-frecuentes' element={<PreguntasFrecuentes />} />
+              <Route path='preguntar' element={<Preguntar />} />
             </Route>
           </Route>
-          <Route path='carrito' element={<Carrito />}/>
-          <Route path='finalizar-compra' element={<Comprar />}/>
-          <Route path='compra-finalizada' element={<FinCompra />}/>
-          <Route path='mi-cuenta' />
-          <Route path='ayuda' />
-          </Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
       </CartProvider>
     

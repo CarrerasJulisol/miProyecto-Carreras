@@ -1,17 +1,19 @@
-const ItemCount = ({cantidad, setCantidad, prodStock}) => {
+const ItemCount = ({cantidad, setCantidad, prodStock, setProdStock}) => {
     function restar() {
         if ( cantidad >= 1) {
             setCantidad((prev) => prev - 1)
+            setProdStock((prev) => prev + 1)
         }
     }
 
     function sumar() {
         if ( cantidad < prodStock) {
             setCantidad((prev) => prev + 1)
+            setProdStock((prev) => prev - 1)
         }
     }
 
-    return <div>
+    return <div className="grid-count">
         <div className="cont-cantidad">
             <button className="restar" onClick={restar}>-</button>
             <div className="cantidad">{cantidad}</div>

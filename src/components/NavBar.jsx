@@ -4,6 +4,11 @@ import CartWidget from "./Carrito/CartWidget";
 import logo from "./Imagenes/logo.svg"
 
 function NavBar() {
+    let navigate = useNavigate()
+    ///const sesion = sessionStorage.getItem('sesion')
+    //console.log("sesion")
+   // console.log(sesion)
+
     function visibleCateg() {
         const listaCategorias = document.getElementById('list-categ')
         listaCategorias.classList.toggle('visible')
@@ -22,8 +27,6 @@ function NavBar() {
     
     }
 
-    const navigate = useNavigate()
-    
     return (
         <nav className="estilo-nav">
             <div>
@@ -35,29 +38,19 @@ function NavBar() {
             <div>
                 <ol className="menu-contenedor">
                     <li className="orden-menu">
-                        <p id="categorias" onClick={visibleCateg} style={{margin: 0}}>Productos</p>
-                            <ul className="estilo-categ" id='list-categ'>
-                                <li className="padd"><Link to="/productos">Todos</Link></li>
-                                <li className="padd"><Link to="/productos/categoria/cosmetica">Cosmetica</Link></li>
-                                <li className="padd"><Link to="/productos/categoria/limpieza">Limpieza</Link></li>
-                                <li className="padd"><Link to="/productos/categoria/higiene-personal">Higiene personal</Link></li>
-                            </ul>
-                    </li>
-                    <li className="orden-menu">
-                        <p id="mi-cuenta" onClick={visibleCuenta} style={{margin: 0}}>Mi cuenta</p>
-                        <ul className="estilo-categ" id="list-cuenta">
-                            <li className="padd"><Link to="/ingresar">Ingresar</Link></li>
-                            <li className="padd"><Link to="/facturas">Facturas</Link></li>
-                            <li className="padd"><Link to="/sorteos">Sorteos</Link></li>
-                            <li className="padd"><Link to="/preguntas">Preguntas</Link></li>
+                        <p id="categorias" onClick={visibleCateg}  style={{margin: 0}}>Productos</p>
+                        <ul className="estilo-categ" id='list-categ'>
+                                <li className="padd" onClick={()=> navigate(`/productos`)}>Todos</li>
+                                <li className="padd" onClick={()=> navigate(`/productos/categoria/cosmetica`)}>Cosmetica</li>
+                                <li className="padd" onClick={()=> navigate(`/productos/categoria/limpieza`)}>Limpieza</li>
+                                <li className="padd" onClick={()=> navigate(`/productos/categoria/higiene-personal`)}>Higiene personal</li>
                         </ul>
                     </li>
                     <li className="orden-menu">
                         <p id="ayuda" onClick={visibleAyuda} style={{margin: 0}}>Ayuda</p>
                         <ul className="estilo-categ" id='list-ayuda'>
-                            <li className="padd"><Link to="/preguntas-frecuentes">Preguntas Frecuentes</Link></li>
-                            <li className="padd"><Link to="/preguntar">Quiero Preguntar</Link></li>
-                            <li className="padd"><Link to="/redes">Redes</Link></li>
+                            <li className="padd" onClick={()=> navigate(`/ayuda/preguntas-frecuentes`)}>Preguntas Frecuentes</li>
+                            <li className="padd" onClick={()=> navigate(`/ayuda/preguntar`)}>Quiero Preguntar</li>
                         </ul>
                     </li>
                 </ol>

@@ -3,8 +3,27 @@ import { useNavigate } from "react-router-dom"
 import { useCarrito } from "../../context/CartContext"
 
 const Carrito = () => {
-    const {carro, removeItem, clear, total} = useCarrito()
+    const {carro, removeItem, clear, total } = useCarrito()
     const navigate = useNavigate()
+    const [continuar, setContinuar] = React.useState(0)
+    function comprar() {
+        if( carro.length === 0 ) {
+            console.log("No hay productos en el carrito")
+            setContinuar("no")
+        }else{
+            setContinuar("si")
+            navigate(`/finalizar-compra`)
+        }
+    }
+
+    function noHay() {
+        return <div className="modal-no-hay">
+            <div className="estilo-no-hay">
+                <h3>¡Aún no tienes productos en el carrito!</h3>
+                <button onClick={()=> navigate(`/productos`)} className="botones">Volver a ver productos</button>
+            </div>
+        </div>
+    }
 
     function contenidoCarro() {
         return (
@@ -34,7 +53,7 @@ const Carrito = () => {
                 { carro.length === 0 ? <div className="ajuste">
 
                     <div className="no-prod">Ups, aún no tienes productos.</div>
-                    <button className="no-prod-btn" onClick={()=> navigate(`/productos`)}>Volver a ver productos</button>
+                    <button className="no-prod-btn" onClick={()=> navigate(`/productos`)} >Volver a ver productos</button>
                 
                 </div> : contenidoCarro()}
 
@@ -45,18 +64,13 @@ const Carrito = () => {
                 <div className="colum2">${total}</div>
                 <div className="colum2"><button className="vaciar-carro" onClick={clear}>Vaciar carrito</button></div>
             </div>
-            <div className="">
-                <button onClick={()=> navigate(`/productos`)}>Volver</button>
-                <button onClick={()=> navigate(`/finalizar-compra`)}>Comprar</button>
+            <div className="boton-contenedor">
+                <button onClick={()=> navigate(`/productos`)} className="botones botones-tam ">Volver</button>
+                <button onClick={comprar} className="botones botones-tam ">Comprar</button>
             </div>
     </div>
+            <div>{ continuar === "no" ? noHay() : null }</div>
     </div>)
 }
 
 export default Carrito
-/* return (
-                        <div key={element.producto.id}>{element.producto.nombre}</div>
-                        <div>{element.cantidad}</div>
-                        <div>{element.producto.precio}</div>
-                        <div><button className="boton-eliminar" onClick={() => removeItem(element.producto.id)}>x</button></div>
-                    )*/
